@@ -77,3 +77,15 @@ SELECT (`Product Category`),
  FROM `bigquery-practical-493417.retail_sales.data`
  GROUP BY (`Product Category`)
  HAVING Total_revenue > 5000;
+
+---Quesiton 9---
+
+  SELECT `Transaction ID`,
+         `Price per Unit`,
+         
+ CASE 
+   WHEN `Price per Unit` <50 THEN 'CHEAP'
+   WHEN `Price per Unit` BETWEEN 50 AND 200 THEN 'MODERATE'
+   ELSE  'EXPENSIVE'
+   END AS Unit_Cost_Category
+  FROM `bigquery-practical-493417.retail_sales.data`;
