@@ -89,3 +89,17 @@ SELECT (`Product Category`),
    ELSE  'EXPENSIVE'
    END AS Unit_Cost_Category
   FROM `bigquery-practical-493417.retail_sales.data`;
+
+  ---Question 10---
+
+  SELECT 
+    `Customer ID`,
+    Age,
+    `Total Amount`,
+    CASE 
+        WHEN `Total Amount` > 1000 THEN 'High'
+        ELSE 'Low'
+    END AS Spending_Level
+FROM `bigquery-practical-493417.retail_sales.data`
+WHERE Age >= 40;
+
