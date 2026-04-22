@@ -67,3 +67,13 @@ FROM `bigquery-practical-493417.retail_sales.data`
   FROM `bigquery-practical-493417.retail_sales.data`
   WHERE `Total Amount` > 500
   GROUP BY Gender;
+
+---Question 8---
+
+SELECT (`Product Category`),
+
+     SUM(`Total Amount`) AS Total_revenue
+
+ FROM `bigquery-practical-493417.retail_sales.data`
+ GROUP BY (`Product Category`)
+ HAVING Total_revenue > 5000;
